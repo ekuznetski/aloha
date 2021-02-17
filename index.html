@@ -1,0 +1,69 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <title>aloha test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      #icons {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #icons a {
+        display: block;
+        width: fit-content;
+        background-color: #325990;
+        border: 1px solid #1e4775;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px 0 rgb(50 89 144 / 0.5);
+        padding: 10px;
+        margin: 10px 0;
+        transition: box-shadow 0.2s;
+      }
+      #icons a:hover {
+        box-shadow: 0 2px 5px 0 rgb(50 89 144 / 0.5);
+      }
+      #icons a:focus {
+        box-shadow: none;
+      }
+      #icons img {
+        fill: #fff;
+        width: 20px;
+        height: 20px;
+      }
+      .inner-div{
+        width: 25%;
+        min-width: 45px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="icons"></div>
+  </body>
+  <script>
+    window.onload = function () {
+      console.info("window loaded, request data");
+      fetch("http://localhost:3000")
+        .then((response) => {
+          console.info("got data");
+          return response.json();
+        })
+        .then((data) => {
+          console.info("start render");
+          const div = document.getElementById("icons");
+          data.map((el) => {
+            const img = document.createElement("img");
+            const innerDiv = document.createElement("div");
+            innerDiv.className = "inner-div";
+            img.src = `data:image/svg+xml;base64,${el.icon}`;
+            const a = document.createElement("a");
+            a.href = el.url;
+            a.appendChild(img);
+            innerDiv.appendChild(a);
+            div.appendChild(innerDiv);
+          });
+        });
+    };
+  </script>
+</html>

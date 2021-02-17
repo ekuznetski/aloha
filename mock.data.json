@@ -1,0 +1,58 @@
+[
+    {
+        "url": "https://fontawesome.com/icons/copy?style=solid",
+        "icon": "assets/copy.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/file-download?style=solid",
+        "icon": "assets/file-download.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/envelope?style=solid",
+        "icon": "assets/envelope.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/folder?style=solid",
+        "icon": "assets/folder.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/clock?style=solid",
+        "icon": "assets/clock.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/file-image?style=solid",
+        "icon": "assets/file-image.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/file?style=solid",
+        "icon": "assets/file.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/eye-slash?style=solid",
+        "icon": "assets/eye-slash.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/save?style=solid",
+        "icon": "assets/save.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/registered?style=solid",
+        "icon": "assets/registered.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/user-circle?style=solid",
+        "icon": "assets/user-circle.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/window-close?style=solid",
+        "icon": "assets/window-close.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/trash-alt?style=solid",
+        "icon": "assets/trash-alt.svg"
+    },
+    {
+        "url": "https://fontawesome.com/icons/share-square?style=solid",
+        "icon": "assets/share-square.svg"
+    }
+]
