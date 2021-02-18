@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <title>aloha test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       #icons {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
       }
       #icons a {
         display: block;
@@ -19,20 +20,24 @@
         margin: 10px 0;
         transition: box-shadow 0.2s;
       }
+
       #icons a:hover {
         box-shadow: 0 2px 5px 0 rgb(50 89 144 / 0.5);
       }
+
       #icons a:focus {
         box-shadow: none;
       }
+
       #icons img {
         fill: #fff;
         width: 20px;
         height: 20px;
       }
-      .inner-div{
-        width: 25%;
-        min-width: 45px;
+
+      .inner {
+        width: 20%;
+        min-width: 170px;
         display: flex;
         justify-content: center;
       }
@@ -40,6 +45,7 @@
   </head>
   <body>
     <div id="icons"></div>
+    <div>123</div>
   </body>
   <script>
     window.onload = function () {
@@ -52,16 +58,22 @@
         .then((data) => {
           console.info("start render");
           const div = document.getElementById("icons");
-          data.map((el) => {
+          data.map((el, i) => {
             const img = document.createElement("img");
             const innerDiv = document.createElement("div");
-            innerDiv.className = "inner-div";
+            innerDiv.className = "inner";
             img.src = `data:image/svg+xml;base64,${el.icon}`;
             const a = document.createElement("a");
             a.href = el.url;
             a.appendChild(img);
             innerDiv.appendChild(a);
             div.appendChild(innerDiv);
+            if (i >= data.length - 1) {
+              const innerDiv = document.createElement("div");
+              innerDiv.className = "inner";
+              div.appendChild(innerDiv);
+              div.appendChild(innerDiv.cloneNode(true));
+            }
           });
         });
     };
